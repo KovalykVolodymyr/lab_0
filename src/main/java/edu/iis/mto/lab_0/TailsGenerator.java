@@ -10,8 +10,14 @@ public class TailsGenerator {
         if (value == null) {
             return new ArrayList<>(0);
         }
+        ArrayList<String> tails = new ArrayList<>();
+        for (int i = 0; i < value.length(); i++) {
+            String tail = value.substring(i);
+            tails.add(tail);
+        }
+        tails.add("");
 
-        return new ArrayList<>(value.length());
+        return tails;
     }
 
 }
